@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Puro Sabor</title>
+  <link rel="shortcut icon" href="img/logo3.png" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/estilo.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <script type="text/javascript" src="js/somacarrinho.js"></script>
+</head>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <img src="img/logo.png">
+</div>
+  
+<div class="container">
+  <div class="row">
+    <p><strong>Bem-vindo</strong> ao Restaurante Puro Sabor!</p>
+    <br>
+    <form name="form1" method="POST" action="cadastro.php">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Nome do cliente</span>
+        </div>
+        <input type="text" class="form-control" name="nome" id="nome" aria-describedby="inputGroup-sizing-default">
+      </div>     
+      <br>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Mesa do cliente</span>
+        </div>
+        <input type="text" name="mesa" id="mesa" class="form-control" aria-describedby="inputGroup-sizing-default">
+      </div>
+        <div id="entrada">
+          <p class="title-menu">Entrada</p><table class="table table-hover">
+          <tbody>
+            <tr>
+              <td><h6>SALADA DE BACALHAU</h6></td>
+              <td><h6>BACALHAU, FOLHAS VERDER E AZEITONA</h6></td>
+              <td></td>
+              <td><h6>R$ 20,00</h6></td>
+              <td><input type="number" id="qntd1" onclick="somarSalada()"></td>
+              <td><p id="resultado1"></p></td>
+            </tr>
+            <tr>
+              <td><h6>BOLINHO DE FRANGO COM CATUPIRY</h6></td>
+              <td></td>
+              <td></td>
+              <td><h6>R$ 24,90</h6></td>
+              <td><input type="number" id="qntd2" onclick="somarBolinho()"></td>
+              <td><p id="resultado2"></p></td>
+            </tr>
+            <tr>
+              <td><h6>COUVERT</h6></td>
+              <td><h6>CESTA DE PÃES, AZEITONA E QUEIJOS</h6></td>
+              <td></td>
+              <td><h6>R$ 15,00</h6></td>
+              <td><input type="number" id="qntd3" onclick="somarCouvert()"></td>
+              <td><p id="resultado3"></p></td>
+            </tr>
+            <tr>
+              <td><h6>TÁBUA DE FRIOS E QUEIJOS</h6></td>
+              <td></td>
+              <td></td>
+              <td><h6>R$ 22,90</h6></td>
+              <td><input type="number" id="qntd4" onclick="somarTabua()"></td>
+              <td><p id="resultado4"></p></td>
+            </tr>
+            <tr>
+              <td><h6>PASTÉIS FRITOS</h6></td>
+              <td><h6>NOS SABORES CARNE, QUEIJO E FRANGO</h6></td>
+              <td></td>
+              <td><h6>R$ 18,00</h6></td>
+              <td><input type="number" id="qntd5" onclick="somarPasteis()"></td>
+              <td><p id="resultado5"></p></td>
+            </tr>
+          </tbody>
+        </table>
+        
+        
+        <p class="title-menu">PRATOS PRINCIPAIS</p><table class="table table-hover">
+          <tbody>
+            <tr>
+              <td><h6>RISOTO DE CAMARÃO</h6></td>
+              <td></td>
+              <td><h6>R$ 68,00</h6></td>
+               <td><input type="number" id="qntd6" onclick="somarRisoto()"></td>
+              <td><p id="resultado6"></p></td>
+            </tr>
+            <tr>
+              <td><h6>FILÉ A PARMEGIANA</h6></td>
+              <td><h6>CARNE OU FRANGO</h6></td>
+              <td><h6>R$ 45,00</h6></td>
+               <td><input type="number" id="qntd7" onclick="somarFile()"></td>
+              <td><p id="resultado7"></p></td>
+            </tr>
+            <tr>
+              <td><h6>LASANHA A BOLONHESA</h6></td>
+              <td></td>
+              <td><h6>R$ 32,90</h6></td>
+               <td><input type="number" id="qntd8" onclick="somarLasanha()"></td>
+              <td><p id="resultado8"></p></td>
+            </tr>
+            <tr>
+              <td><h6>FEIJOADA</h6></td>
+              <td><h6>ACOMPANHA ARROZ E FAROFA</h6></td>
+              <td><h6>R$ 39,90</h6></td>
+               <td><input type="number" id="qntd9" onclick="somarFeijoada()"></td>
+              <td><p id="resultado9"></p></td>
+            </tr>
+            <tr>
+              <td><h6>ESCONDIDINHO DE CARNE</h6></td>
+              <td><h6>FEITO COM MANDIOCA</h6></td>
+              <td><h6>R$ 28,00</h6></td>
+               <td><input type="number" id="qntd10" onclick="somarEscondidinho()"></td>
+              <td><p id="resultado10"></p></td>
+            </tr>
+          </tbody>
+        </table>
+        
+
+        <p class="title-menu">SOBREMESAS</p><table class="table table-hover">
+          <tbody>
+            <tr>
+              <td><h6>SORVETE</h6></td>
+              <td></td>
+              <td><h6>R$ 8,00</h6></td>
+               <td><input type="number" id="qntd11" onclick="somarSorvete()"></td>
+              <td><p id="resultado11"></p></td>
+            </tr>
+            <tr>
+              <td><h6>PAVÊ DE CHOCOLATE</h6></td>
+              <td></td>
+              <td><h6>R$ 10,00</h6></td>
+               <td><input type="number" id="qntd12" onclick="somarPave()"></td>
+              <td><p id="resultado12"></p></td>
+            </tr>
+            <tr>
+              <td><h6>PETIT GATEAU</h6></td>
+              <td></td>
+              <td><h6>R$ 15,00</h6></td>
+               <td><input type="number" id="qntd13" onclick="somarPetit()"></td>
+              <td><p id="resultado13"></p></td>
+            </tr>
+            <tr>
+              <td><h6>CASCATA GELADA</h6></td>
+              <td><h6>SORVETE DE CREME, BISCOITO E CALDA DE CHOCOLATE</h6></td>
+              <td><h6>R$ 18,00</h6></td>
+               <td><input type="number" id="qntd14" onclick="somarCascata()"></td>
+              <td><p id="resultado14"></p></td>
+            </tr>
+            <tr>
+              <td><h6>PUDIM</h6></td>
+              <td></td>
+              <td><h6>R$ 5,00</h6></td>
+               <td><input type="number" id="qntd15" onclick="somarPudim()"></td>
+              <td><p id="resultado15"></p></td>
+            </tr>           
+          <center>
+          <td><input style="width: 75%;" type="button" name="botao" class="btn btn-success" value="Calcular Total" onclick="calcularValor()"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td id="totalGeral"></td>
+            </tr>
+        </tbody>
+        </table>
+        <br><br>
+         <center><input style="width: 50%;" type="submit" value="Cadastrar Pedido" name="Cadastrar" class="btn btn-success"></center>
+        </form>
+        <br>       
+        <form name="form1" method="POST" action="listar.php">
+          <center><input style="width: 50%;" type="submit" value="Lista de espera" name="Cadastrar" class="btn btn-success"></center>
+        </form>
+        </div>
+      </div>
+  </div>
+</div>
+
+</body>
+</html>
